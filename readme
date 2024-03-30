@@ -1,0 +1,20 @@
+using typescript so u have to write some config
+for typescript capabilities in your backend
+
+u need tsc
+npx -p typescript 
+tsc --init
+
+intall packages npm i typescript 
+npm i nodemon express cors mongoose jsonwebtoken bcrypt ts-node
+
+
+
+    "start": "node server",// to run build version of our application
+    "dev": "nodemon ./src/index.ts"// npm run dev 
+       "build": "tsc -p ."
+
+
+User authentication and authorization
+
+1)npm i express mongoose dotenv body-parser cookie-parser bcrypt jsonwebtoken
