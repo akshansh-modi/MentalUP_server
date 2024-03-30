@@ -3,7 +3,7 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-// import 'dotenv/config'
+import 'dotenv/config'
 import {userRouter} from "./routes/user"
 import { coachRouter } from './routes/coach';
 const app = express();
@@ -18,9 +18,11 @@ app.use(cors())// help us in connection from our react app
 app.use("/user",userRouter)
 app.use("/coach",coachRouter)
 // mongoose.connect(process.env.Mongodbconnect)
+
 async function connectToDatabase() {
     try {
-      await mongoose.connect(process.env.Mongodbconnect);
+
+      await mongoose.connect(process.env.MONGODB_URL);
       console.log("Connected to the database");
     } catch (error) {
       console.error("Error connecting to the database:", error);
