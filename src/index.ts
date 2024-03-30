@@ -20,7 +20,7 @@ app.use("/coach",coachRouter)
 // mongoose.connect(process.env.Mongodbconnect)
 async function connectToDatabase() {
     try {
-      await mongoose.connect("mongodb://localhost:27017/ecommerce");
+      await mongoose.connect(process.env.Mongodbconnect);
       console.log("Connected to the database");
     } catch (error) {
       console.error("Error connecting to the database:", error);
